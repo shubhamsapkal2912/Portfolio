@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shubham Sapkal - AI/ML Engineer & Full-Stack Developer Portfolio. Futuristic design showcasing cutting-edge projects.">
+  <title>Shubham Sapkal | AI Engineer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="neural-bg" id="neuralBg"></div>
+  
+  <!-- Navigation -->
+  <header class="glass-nav">
+    <div class="logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-text">SS</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <nav id="mainNav">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="Resume.pdf" class="btn-glow" target="_blank">Resume</a>
+    </nav>
+    <button id="navToggle" class="hamburger">☰</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="glitch-wrapper">
+        <h1 class="hero-title glitch" data-text="SHUBHAM SAPKAL">SHUBHAM SAPKAL</h1>
+      </div>
+      <div class="typewriter-container">
+        <h2 class="typewriter">
+          <span class="typing-text">AI/ML Engineer | Full-Stack Developer | Computer Vision Specialist</span>
+        </h2>
+      </div>
+      <p class="hero-subtitle">
+        Building intelligent systems that bridge <span class="highlight">neural networks</span> and 
+        <span class="highlight">user experiences</span>. From YOLO object detection to scalable Django APIs.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">
+          <span>Explore Projects</span>
+          <span class="btn-icon">→</span>
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <span>Get In Touch</span>
+        </a>
+      </div>
+      <div class="social-icons">
+        <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://leetcode.com" target="_blank" class="social-icon" aria-label="LeetCode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">01.</span> About Me
+      </h2>
+      <div class="about-grid">
+        <div class="about-content glass-card">
+          <p class="intro-text">
+            I'm a <span class="highlight">results-driven AI/ML Engineer</span> specializing in Computer Vision, 
+            Deep Learning, and Full-Stack Development. Currently at <strong>Augmented Transformations</strong>, 
+            I build end-to-end intelligent systems—from training YOLO models to deploying Django REST APIs.
+          </p>
+          <p>
+            My passion lies in creating <span class="highlight">automation-driven products</span> with measurable 
+            business impact. Whether it's improving model accuracy by 15%, reducing dashboard load times by 30%, 
+            or architecting scalable microservices, I focus on solutions that matter.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">2+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">6+</div>
+              <div class="stat-label">Projects Shipped</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15%</div>
+              <div class="stat-label">Model Accuracy ↑</div>
+            </div>
+          </div>
+        </div>
+        <div class="tech-orbit">
+          <div class="orbit-center">AI/ML</div>
+          <div class="orbit-ring ring-1">
+            <span class="orbit-item">Python</span>
+          </div>
+          <div class="orbit-ring ring-2">
+            <span class="orbit-item">Django</span>
+          </div>
+          <div class="orbit-ring ring-3">
+            <span class="orbit-item">Angular</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">02.</span> Experience
+      </h2>
+      <div class="timeline">
+        <div class="timeline-item glass-card">
+          <div class="timeline-badge">2025</div>
+          <div class="timeline-content">
+            <h3>Software Engineer</h3>
+            <h4>Augmented Transformations Pvt Ltd</h4>
+            <span class="date">May 2025 - Present</span>
+            <ul>
+              <li>Architected <strong>AI-powered Video Analytics System</strong> for helmet & animal detection using YOLO models</li>
+              <li>Designed RESTful APIs with Django REST Framework for real-time inference pipelines</li>
+              <li>Improved model accuracy by <strong>15%</strong> through strategic dataset curation</li>
+              <li>Enhanced Angular dashboard responsiveness by <strong>25%</strong> with lazy loading</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Django</span>
+              <span>Angular</span>
+              <span>Computer Vision</span>
+              <span>OpenCV</span>
+              <span>Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item glass-card">
+          <div class="timeline-badge">2024</div>
+          <div class="timeline-content">
+            <h3>Java Full Stack Developer Intern</h3>
+            <h4>ThinkQuotient Software</h4>
+            <span class="date">Dec 2024 - May 2025</span>
+            <ul>
+              <li>Delivered <strong>3+ full-stack modules</strong> improving system performance by 20%</li>
+              <li>Built backend with Core Java, JDBC, MySQL; frontend with Angular</li>
+              <li>Refactored Angular components, reducing load times by <strong>30%</strong></li>
+            </ul>
+            <div class="tech-tags">
+              <span>Java</span>
+              <span>Angular</span>
+              <span>MySQL</span>
+              <span>JDBC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">03.</span> Technical Arsenal
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-category glass-card">
+          <div class="skill-icon">🧠</div>
+          <h3>AI/ML & Vision</h3>
+          <div class="skill-list">
+            <span>Model Training</span>
+            <span>YOLO Detection</span>
+            <span>OpenCV</span>
+            <span>Data Annotation</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Backend</h3>
+          <div class="skill-list">
+            <span>Django/DRF</span>
+            <span>Python</span>
+            <span>Java</span>
+            <span>REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <div class="skill-icon">🎨</div>
+          <h3>Frontend</h3>
+          <div class="skill-list">
+            <span>Angular</span>
+            <span>TypeScript</span>
+            <span>HTML/CSS</span>
+            <span>Responsive Design</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <div class="skill-icon">🛠️</div>
+          <h3>DevOps & Tools</h3>
+          <div class="skill-list">
+            <span>Docker</span>
+            <span>Git/GitHub</span>
+            <span>CI/CD</span>
+            <span>Linux</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <div class="skill-icon">🗄️</div>
+          <h3>Databases</h3>
+          <div class="skill-list">
+            <span>MySQL</span>
+            <span>Firebase</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">04.</span> Featured Projects
+      </h2>
+      <div class="projects-grid">
+        <div class="project-card glass-card">
+          <div class="project-number">01</div>
+          <h3>Placement Management System</h3>
+          <p>Dual Android apps with Firebase Realtime DB delivering instant updates to students & admins. Reduced coordination time by <strong>80%</strong>.</p>
+          <div class="project-impact">Impact: 80% ↓ manual work</div>
+          <div class="tech-tags">
+            <span>Android</span>
+            <span>Java</span>
+            <span>Firebase</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">View Code →</a>
+          </div>
+        </div>
+        <div class="project-card glass-card">
+          <div class="project-number">02</div>
+          <h3>Twwitt Karo</h3>
+          <p>Secure microblogging platform with Django. Full CRUD operations, robust auth, and responsive UI improving usability by <strong>60%</strong>.</p>
+          <div class="project-impact">Impact: 60% ↑ usability</div>
+          <div class="tech-tags">
+            <span>Django</span>
+            <span>Python</span>
+            <span>SQLite</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Live Demo →</a>
+          </div>
+        </div>
+        <div class="project-card glass-card">
+          <div class="project-number">03</div>
+          <h3>Automated Email System</h3>
+          <p>Python-powered email dispatch automating 100+ personalized internship applications with <strong>90%</strong> efficiency boost.</p>
+          <div class="project-impact">Impact: 90% ↑ efficiency</div>
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>SMTP</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">View Code →</a>
+          </div>
+        </div>
+        <div class="project-card glass-card">
+          <div class="project-number">04</div>
+          <h3>Custom DBMS Console</h3>
+          <p>Console-based database management system mimicking SQL operations with CRUD, aggregates, and method overloading.</p>
+          <div class="project-impact">Educational Project</div>
+          <div class="tech-tags">
+            <span>Java</span>
+            <span>Data Structures</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Documentation →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">05.</span> Get In Touch
+      </h2>
+      <div class="contact-grid">
+        <div class="contact-info glass-card">
+          <h3>Let's Build Something Intelligent</h3>
+          <p>Whether you're looking for an AI engineer, full-stack developer, or just want to discuss cutting-edge tech—I'm always open to new opportunities.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <a href="mailto:shubhamsapkal2912@gmail.com">shubhamsapkal2912@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📱</span>
+              <span>+91 9373290652</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <span>Pune, India</span>
+            </div>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form glass-card">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">
+            <span>Send Message</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Designed & Built by <span class="highlight">Shubham Sapkal</span></p>
+      <p class="footer-tech">Made with Django mindset & Angular precision</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
