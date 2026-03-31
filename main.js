@@ -1,175 +1,141 @@
-// Mobile Navigation Toggle
-const navToggle = document.getElementById('navToggle');
-const mainNav = document.getElementById('mainNav');
+(function () {
+  'use strict';
 
-navToggle.addEventListener('click', () => {
-  mainNav.classList.toggle('active');
-});
+  /* 1. TYPEWRITER */
+  var roles = ['Full Stack Engineer', 'Angular Developer', 'Django Backend Dev', 'REST API Architect', 'Problem Solver'];
+  var ri = 0, ci = 0, del = false;
+  var tel = document.getElementById('typingText');
 
-// Close nav when clicking link
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    mainNav.classList.remove('active');
-  });
-});
-
-// Neural Network Particle Animation
-const neuralBg = document.getElementById('neuralBg');
-const particleCount = 50;
-
-for (let i = 0; i < particleCount; i++) {
-  const particle = document.createElement('div');
-  particle.className = 'particle';
-  particle.style.cssText = `
-    position: absolute;
-    width: ${Math.random() * 3 + 1}px;
-    height: ${Math.random() * 3 + 1}px;
-    background: rgba(0, 245, 255, ${Math.random() * 0.5 + 0.2});
-    border-radius: 50%;
-    top: ${Math.random() * 100}%;
-    left: ${Math.random() * 100}%;
-    animation: float ${Math.random() * 20 + 10}s linear infinite;
-    box-shadow: 0 0 ${Math.random() * 10 + 5}px rgba(0, 245, 255, 0.5);
-  `;
-  neuralBg.appendChild(particle);
-}
-
-// Particle float animation
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    25% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
-    50% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
-    75% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
+  function tw() {
+    if (!tel) return;
+    var cur = roles[ri];
+    tel.textContent = del ? cur.substring(0, ci - 1) : cur.substring(0, ci + 1);
+    del ? ci-- : ci++;
+    var d = del ? 60 : 100;
+    if (!del && ci === cur.length) { d = 1800; del = true; }
+    else if (del && ci === 0) { del = false; ri = (ri + 1) % roles.length; d = 400; }
+    setTimeout(tw, d);
   }
-`;
-document.head.appendChild(style);
+  setTimeout(tw, 800);
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-// Scroll Animations (Intersection Observer)
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, observerOptions);
-
-// Observe all glass cards and sections
-document.querySelectorAll('.glass-card, .section').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
-});
-
-// Typewriter Effect
-const typewriterText = document.querySelector('.typing-text');
-if (typewriterText) {
-  const text = typewriterText.textContent;
-  typewriterText.textContent = '';
-  let i = 0;
-  
-  function typeWriter() {
-    if (i < text.length) {
-      typewriterText.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 50);
+  /* 2. HERO PARTICLES */
+  var hp = document.getElementById('heroParticles');
+  if (hp) {
+    for (var i = 0; i < 35; i++) {
+      var dot = document.createElement('div');
+      dot.className = 'particle-dot';
+      var s = Math.random() * 5 + 2;
+      dot.style.cssText =
+        'width:' + s + 'px;height:' + s + 'px;' +
+        'left:' + Math.random() * 100 + '%;top:' + Math.random() * 100 + '%;' +
+        'animation-duration:' + (Math.random() * 15 + 10) + 's;' +
+        'animation-delay:' + (Math.random() * 8) + 's;';
+      hp.appendChild(dot);
     }
   }
-  
-  setTimeout(typeWriter, 500);
-}
 
-// Contact Form Handler
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Simulate form submission
-    const btn = contactForm.querySelector('button');
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '<span>Sending...</span>';
-    btn.disabled = true;
-    
-    setTimeout(() => {
-      btn.innerHTML = '<span>✓ Message Sent!</span>';
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.disabled = false;
-        contactForm.reset();
-      }, 2000);
-    }, 1500);
-  });
-}
-
-// Active Nav Link on Scroll
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (scrollY >= (sectionTop - 200)) {
-      current = section.getAttribute('id');
-    }
+  /* 3. NAVBAR SCROLL */
+  var nb = document.getElementById('mainNavbar');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 60) { nb.style.boxShadow = '0 4px 24px rgba(26,115,232,.15)'; nb.style.padding = '.5rem 0'; }
+    else { nb.style.boxShadow = '0 2px 16px rgba(26,115,232,.08)'; nb.style.padding = '.8rem 0'; }
   });
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href').includes(current)) {
-      link.classList.add('active');
-    }
+  /* 4. ACTIVE NAV */
+  var secs = document.querySelectorAll('section[id]');
+  var nls = document.querySelectorAll('#mainNavbar .nav-link');
+  function upNav() {
+    var cur = '';
+    secs.forEach(function (s) { if (window.scrollY >= s.offsetTop - 150) cur = s.getAttribute('id'); });
+    nls.forEach(function (l) {
+      l.classList.remove('active');
+      if (l.getAttribute('href') && l.getAttribute('href').includes(cur)) l.classList.add('active');
+    });
+  }
+  window.addEventListener('scroll', upNav);
+
+  /* 5. SMOOTH SCROLL */
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var t = document.querySelector(this.getAttribute('href'));
+      if (t) {
+        e.preventDefault();
+        window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 75, behavior: 'smooth' });
+        var nc = document.getElementById('navbarNav');
+        if (nc && nc.classList.contains('show') && typeof $ !== 'undefined') $(nc).collapse('hide');
+      }
+    });
   });
-});
 
-// Cursor Glow Effect (Optional - Advanced)
-const cursorGlow = document.createElement('div');
-cursorGlow.style.cssText = `
-  position: fixed;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 245, 255, 0.1) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s;
-  opacity: 0;
-`;
-document.body.appendChild(cursorGlow);
+  /* 6. SCROLL ANIMATIONS */
+  var aels = document.querySelectorAll('.animate-on-scroll');
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e, i) {
+        if (e.isIntersecting) {
+          setTimeout(function () { e.target.classList.add('visible'); }, i * 80);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    aels.forEach(function (el) { obs.observe(el); });
+  } else {
+    aels.forEach(function (el) { el.classList.add('visible'); });
+  }
 
-document.addEventListener('mousemove', (e) => {
-  cursorGlow.style.left = e.clientX + 'px';
-  cursorGlow.style.top = e.clientY + 'px';
-  cursorGlow.style.opacity = '1';
-});
+  /* 7. CONTACT FORM */
+  var cf = document.getElementById('contactForm');
+  var sb = document.getElementById('sendBtn');
+  if (cf) {
+    cf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var n = document.getElementById('contactName').value.trim();
+      var em = document.getElementById('contactEmail').value.trim();
+      var msg = document.getElementById('contactMessage').value.trim();
+      if (!n || !em || !msg) { showAlert('Please fill in all required fields.', 'danger'); return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { showAlert('Please enter a valid email address.', 'danger'); return; }
+      var oh = sb.innerHTML;
+      sb.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+      sb.disabled = true;
+      setTimeout(function () {
+        sb.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
+        sb.style.background = 'linear-gradient(135deg,#10b981,#059669)';
+        showAlert('Thank you! Your message has been sent successfully.', 'success');
+        cf.reset();
+        setTimeout(function () { sb.innerHTML = oh; sb.style.background = ''; sb.disabled = false; }, 3500);
+      }, 1600);
+    });
+  }
 
-document.addEventListener('mouseleave', () => {
-  cursorGlow.style.opacity = '0';
-});
+  function showAlert(msg, type) {
+    var ex = document.getElementById('formAlert'); if (ex) ex.remove();
+    var al = document.createElement('div');
+    al.id = 'formAlert';
+    al.className = 'alert alert-' + type + ' mt-3';
+    al.style.cssText = 'border-radius:10px;font-size:.9rem;font-weight:500;';
+    al.innerHTML = '<i class="fas fa-' + (type === 'success' ? 'check-circle' : 'exclamation-circle') + ' mr-2"></i>' + msg;
+    cf.appendChild(al);
+    setTimeout(function () { if (al.parentNode) al.remove(); }, 4000);
+  }
 
-// Console Easter Egg
-console.log('%c🤖 Welcome to Shubham\'s Portfolio!', 'color: #00f5ff; font-size: 20px; font-weight: bold;');
-console.log('%cBuilt with: HTML, CSS, JavaScript & lots of ☕', 'color: #a855f7; font-size: 14px;');
-console.log('%cInterested in the code? Check out my GitHub!', 'color: #8892b0; font-size: 12px;');
+  /* 8. SKILL HOVER */
+  document.querySelectorAll('.skill-card').forEach(function (card) {
+    card.addEventListener('mouseenter', function () {
+      this.querySelectorAll('.skill-tags span').forEach(function (s, i) {
+        setTimeout(function () { s.style.transform = 'scale(1.05)'; }, i * 40);
+      });
+    });
+    card.addEventListener('mouseleave', function () {
+      this.querySelectorAll('.skill-tags span').forEach(function (s) { s.style.transform = 'scale(1)'; });
+    });
+  });
+
+  /* 9. BOOTSTRAP SCROLLSPY */
+  if (typeof $ !== 'undefined') $('body').scrollspy({ target: '#mainNavbar', offset: 80 });
+
+  /* 10. CONSOLE EASTER EGG */
+  console.log('%c Shubham Sapkal | Portfolio', 'color:#1a73e8;font-size:20px;font-weight:bold;');
+  console.log('%c Full Stack Engineer | Angular + Django', 'color:#0ea5e9;font-size:13px;');
+  console.log('%c shubhamsapkal2912@gmail.com', 'color:#10b981;font-size:12px;');
+
+})();

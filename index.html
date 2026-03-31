@@ -1,346 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shubham Sapkal - AI/ML Engineer & Full-Stack Developer Portfolio. Futuristic design showcasing cutting-edge projects.">
-  <title>Shubham Sapkal | AI Engineer Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shubham Sapkal | Full Stack Engineer</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-<body>
-  <!-- Animated Background -->
-  <div class="neural-bg" id="neuralBg"></div>
-  
-  <!-- Navigation -->
-  <header class="glass-nav">
-    <div class="logo">
-      <span class="logo-bracket">&lt;</span>
-      <span class="logo-text">SS</span>
-      <span class="logo-bracket">/&gt;</span>
-    </div>
-    <nav id="mainNav">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#experience" class="nav-link">Experience</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#contact" class="nav-link">Contact</a>
-      <a href="Resume.pdf" class="btn-glow" target="_blank">Resume</a>
-    </nav>
-    <button id="navToggle" class="hamburger">☰</button>
-  </header>
+<body data-spy="scroll" data-target="#mainNavbar" data-offset="80">
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-container">
-      <div class="glitch-wrapper">
-        <h1 class="hero-title glitch" data-text="SHUBHAM SAPKAL">SHUBHAM SAPKAL</h1>
-      </div>
-      <div class="typewriter-container">
-        <h2 class="typewriter">
-          <span class="typing-text">AI/ML Engineer | Full-Stack Developer | Computer Vision Specialist</span>
-        </h2>
-      </div>
-      <p class="hero-subtitle">
-        Building intelligent systems that bridge <span class="highlight">neural networks</span> and 
-        <span class="highlight">user experiences</span>. From YOLO object detection to scalable Django APIs.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn-primary">
-          <span>Explore Projects</span>
-          <span class="btn-icon">→</span>
-        </a>
-        <a href="#contact" class="btn-secondary">
-          <span>Get In Touch</span>
-        </a>
-      </div>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-        <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        </a>
-        <a href="https://leetcode.com" target="_blank" class="social-icon" aria-label="LeetCode">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
-        </a>
-      </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand font-weight-bold" href="#hero">
+      <span class="brand-bracket">&lt;</span>SS<span class="brand-bracket">/&gt;</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item ml-2"><a class="btn btn-primary-custom btn-sm px-3" href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">01.</span> About Me
-      </h2>
-      <div class="about-grid">
-        <div class="about-content glass-card">
-          <p class="intro-text">
-            I'm a <span class="highlight">results-driven AI/ML Engineer</span> specializing in Computer Vision, 
-            Deep Learning, and Full-Stack Development. Currently at <strong>Augmented Transformations</strong>, 
-            I build end-to-end intelligent systems—from training YOLO models to deploying Django REST APIs.
-          </p>
-          <p>
-            My passion lies in creating <span class="highlight">automation-driven products</span> with measurable 
-            business impact. Whether it's improving model accuracy by 15%, reducing dashboard load times by 30%, 
-            or architecting scalable microservices, I focus on solutions that matter.
-          </p>
-          <div class="stats-grid">
-            <div class="stat-item">
-              <div class="stat-number">2+</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">6+</div>
-              <div class="stat-label">Projects Shipped</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">15%</div>
-              <div class="stat-label">Model Accuracy ↑</div>
-            </div>
+<!-- HERO -->
+<section id="hero" class="hero-section">
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="container text-center position-relative">
+    <p class="hero-greeting mb-2">👋 Hello, I'm</p>
+    <h1 class="hero-name mb-3">Shubham Sapkal</h1>
+    <div class="typewriter-wrap mb-4">
+      <span class="typing-label">I'm a </span><span id="typingText"></span><span class="cursor-blink">|</span>
+    </div>
+    <p class="hero-desc mx-auto mb-5">
+      Full Stack Software Engineer specializing in <strong>Angular</strong>, <strong>Django</strong> &amp; <strong>REST APIs</strong>.
+      Building scalable, intelligent systems — from real-time dashboards to AI-powered applications.
+    </p>
+    <div class="d-flex justify-content-center flex-wrap mb-5">
+      <a href="#projects" class="btn btn-hero-primary mr-3 mb-2"><i class="fas fa-code mr-2"></i>View My Work</a>
+      <a href="#contact" class="btn btn-hero-outline mb-2"><i class="fas fa-paper-plane mr-2"></i>Hire Me</a>
+    </div>
+    <div class="hero-socials d-flex justify-content-center">
+      <a href="mailto:shubhamsapkal2912@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/YOUR-PROFILE" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/YOUR-USERNAME" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://leetcode.com/YOUR-USERNAME" target="_blank" class="social-btn" title="LeetCode"><i class="fas fa-terminal"></i></a>
+    </div>
+    <div class="scroll-indicator mt-5"><a href="#about"><i class="fas fa-chevron-down"></i></a></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad bg-white">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">01. About</span>
+      <h2 class="section-title">Who Am I?</h2>
+      <div class="title-line mx-auto"></div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-5 mb-5 mb-lg-0 text-center">
+        <div class="avatar-wrapper mx-auto">
+          <div class="avatar-ring">
+            <div class="avatar-inner"><span class="avatar-initials">SS</span></div>
           </div>
+          <div class="avatar-badge"><i class="fas fa-code mr-1"></i>Full Stack Engineer</div>
         </div>
-        <div class="tech-orbit">
-          <div class="orbit-center">AI/ML</div>
-          <div class="orbit-ring ring-1">
-            <span class="orbit-item">Python</span>
-          </div>
-          <div class="orbit-ring ring-2">
-            <span class="orbit-item">Django</span>
-          </div>
-          <div class="orbit-ring ring-3">
-            <span class="orbit-item">Angular</span>
-          </div>
+      </div>
+      <div class="col-lg-7">
+        <h3 class="about-heading mb-3">Full Stack Software Engineer</h3>
+        <p class="about-text">I'm a results-driven Full Stack Software Engineer with expertise in building scalable web applications using <strong>Angular</strong>, <strong>Django</strong>, and <strong>REST APIs</strong>. I specialize in designing end-to-end systems, integrating frontend &amp; backend services, and optimizing performance for real-time applications.</p>
+        <p class="about-text">With a strong foundation in system design, distributed architectures, and data-driven applications, I love turning complex problems into elegant solutions. Currently pursuing MCA at MIT Arts Commerce Science College, Alandi (SPPU).</p>
+        <div class="row mt-4">
+          <div class="col-4 text-center"><div class="stat-card"><div class="stat-number">2+</div><div class="stat-label">Years Exp.</div></div></div>
+          <div class="col-4 text-center"><div class="stat-card"><div class="stat-number">4+</div><div class="stat-label">Projects</div></div></div>
+          <div class="col-4 text-center"><div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Technologies</div></div></div>
+        </div>
+        <div class="mt-4">
+          <a href="mailto:shubhamsapkal2912@gmail.com" class="btn btn-primary-custom mr-3"><i class="fas fa-envelope mr-2"></i>Get In Touch</a>
+          <a href="https://github.com/YOUR-USERNAME" target="_blank" class="btn btn-outline-custom"><i class="fab fa-github mr-2"></i>GitHub</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">02.</span> Experience
-      </h2>
-      <div class="timeline">
-        <div class="timeline-item glass-card">
-          <div class="timeline-badge">2025</div>
-          <div class="timeline-content">
-            <h3>Software Engineer</h3>
-            <h4>Augmented Transformations Pvt Ltd</h4>
-            <span class="date">May 2025 - Present</span>
-            <ul>
-              <li>Architected <strong>AI-powered Video Analytics System</strong> for helmet & animal detection using YOLO models</li>
-              <li>Designed RESTful APIs with Django REST Framework for real-time inference pipelines</li>
-              <li>Improved model accuracy by <strong>15%</strong> through strategic dataset curation</li>
-              <li>Enhanced Angular dashboard responsiveness by <strong>25%</strong> with lazy loading</li>
+<!-- EXPERIENCE -->
+<section id="experience" class="section-pad bg-light-custom">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">02. Experience</span>
+      <h2 class="section-title">Work History</h2>
+      <div class="title-line mx-auto"></div>
+    </div>
+    <div class="timeline">
+      <!-- Job 1 -->
+      <div class="timeline-item animate-on-scroll">
+        <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+        <div class="timeline-card card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-start mb-2">
+              <div>
+                <h4 class="exp-title mb-1">Software Engineer</h4>
+                <h5 class="exp-company mb-1"><i class="fas fa-building mr-2"></i>Augmented Transformations Pvt Ltd</h5>
+              </div>
+              <span class="badge-date"><i class="far fa-calendar-alt mr-1"></i>May 2025 – Present</span>
+            </div>
+            <ul class="exp-list mt-3">
+              <li>Designed and developed end-to-end full stack applications for real-time monitoring systems.</li>
+              <li>Built and optimized RESTful APIs using Django REST Framework, handling high-throughput data streams.</li>
+              <li>Developed and integrated Angular dashboards, improving UI responsiveness by <strong>25%</strong>.</li>
+              <li>Implemented real-time data pipelines and WebSocket-based communication for live updates.</li>
+              <li>Containerized applications using Docker and maintained CI-friendly workflows with Git.</li>
             </ul>
-            <div class="tech-tags">
-              <span>Django</span>
-              <span>Angular</span>
-              <span>Computer Vision</span>
-              <span>OpenCV</span>
-              <span>Docker</span>
+            <div class="tech-pills mt-3">
+              <span>Django</span><span>Angular</span><span>WebSocket</span><span>Docker</span><span>REST APIs</span><span>Git</span>
             </div>
           </div>
         </div>
-        <!-- <div class="timeline-item glass-card">
-          <div class="timeline-badge">2024</div>
-          <div class="timeline-content">
-            <h3>Java Full Stack Developer Intern</h3>
-            <h4>ThinkQuotient Software</h4>
-            <span class="date">Dec 2024 - May 2025</span>
-            <ul>
-              <li>Delivered <strong>3+ full-stack modules</strong> improving system performance by 20%</li>
-              <li>Built backend with Core Java, JDBC, MySQL; frontend with Angular</li>
-              <li>Refactored Angular components, reducing load times by <strong>30%</strong></li>
+      </div>
+      <!-- Job 2 -->
+      <div class="timeline-item animate-on-scroll">
+        <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
+        <div class="timeline-card card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-start mb-2">
+              <div>
+                <h4 class="exp-title mb-1">Java Full Stack Developer Intern</h4>
+                <h5 class="exp-company mb-1"><i class="fas fa-building mr-2"></i>ThinkQuotient Software Pvt. Ltd.</h5>
+              </div>
+              <span class="badge-date"><i class="far fa-calendar-alt mr-1"></i>Dec 2024 – May 2025</span>
+            </div>
+            <ul class="exp-list mt-3">
+              <li>Built and optimized <strong>3+ enterprise web modules</strong>, improving application performance by ~20%.</li>
+              <li>Developed backend services using Core Java, JDBC, and MySQL with dynamic Angular frontend components.</li>
+              <li>Refactored Angular services and components, reducing load times by <strong>30%</strong>.</li>
+              <li>Worked in agile sprints delivering scalable and maintainable code.</li>
             </ul>
-            <div class="tech-tags">
-              <span>Java</span>
-              <span>Angular</span>
-              <span>MySQL</span>
-              <span>JDBC</span>
+            <div class="tech-pills mt-3">
+              <span>Core Java</span><span>Angular</span><span>MySQL</span><span>JDBC</span><span>Agile</span>
             </div>
-          </div>
-        </div> -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">03.</span> Technical Arsenal
-      </h2>
-      <div class="skills-grid">
-        <div class="skill-category glass-card">
-          <div class="skill-icon">🧠</div>
-          <h3>AI/ML & Vision</h3>
-          <div class="skill-list">
-            <span>Model Training</span>
-            <span>YOLO Detection</span>
-            <span>OpenCV</span>
-            <span>Data Annotation</span>
-          </div>
-        </div>
-        <div class="skill-category glass-card">
-          <div class="skill-icon">⚙️</div>
-          <h3>Backend</h3>
-          <div class="skill-list">
-            <span>Django/DRF</span>
-            <span>Python</span>
-            <span>Java</span>
-            <span>REST APIs</span>
-          </div>
-        </div>
-        <div class="skill-category glass-card">
-          <div class="skill-icon">🎨</div>
-          <h3>Frontend</h3>
-          <div class="skill-list">
-            <span>Angular</span>
-            <span>TypeScript</span>
-            <span>HTML/CSS</span>
-            <span>Responsive Design</span>
-          </div>
-        </div>
-        <div class="skill-category glass-card">
-          <div class="skill-icon">🛠️</div>
-          <h3>DevOps & Tools</h3>
-          <div class="skill-list">
-            <span>Docker</span>
-            <span>Git/GitHub</span>
-            <span>CI/CD</span>
-            <span>Linux</span>
-          </div>
-        </div>
-        <div class="skill-category glass-card">
-          <div class="skill-icon">🗄️</div>
-          <h3>Databases</h3>
-          <div class="skill-list">
-            <span>MySQL</span>
-            <span>Firebase</span>
-            <span>MongoDB</span>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">04.</span> Featured Projects
-      </h2>
-      <div class="projects-grid">
-        <div class="project-card glass-card">
-          <div class="project-number">01</div>
-          <h3>Placement Management System</h3>
-          <p>Dual Android apps with Firebase Realtime DB delivering instant updates to students & admins. Reduced coordination time by <strong>80%</strong>.</p>
-          <div class="project-impact">Impact: 80% ↓ manual work</div>
-          <div class="tech-tags">
-            <span>Android</span>
-            <span>Java</span>
-            <span>Firebase</span>
+<!-- SKILLS -->
+<section id="skills" class="section-pad bg-white">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">03. Skills</span>
+      <h2 class="section-title">Technical Arsenal</h2>
+      <div class="title-line mx-auto"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+        <div class="skill-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="skill-icon-wrap mb-3"><i class="fas fa-code"></i></div>
+          <h5 class="skill-card-title">Languages</h5>
+          <div class="skill-tags"><span>Python</span><span>Java</span><span>C</span></div>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+        <div class="skill-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="skill-icon-wrap mb-3"><i class="fas fa-desktop"></i></div>
+          <h5 class="skill-card-title">Frontend</h5>
+          <div class="skill-tags"><span>Angular</span><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+        <div class="skill-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="skill-icon-wrap mb-3"><i class="fas fa-server"></i></div>
+          <h5 class="skill-card-title">Backend</h5>
+          <div class="skill-tags"><span>Django</span><span>Django REST Framework</span><span>Core Java</span></div>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+        <div class="skill-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="skill-icon-wrap mb-3"><i class="fas fa-database"></i></div>
+          <h5 class="skill-card-title">Databases</h5>
+          <div class="skill-tags"><span>MySQL</span><span>SQL</span><span>Firebase Realtime DB</span></div>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+        <div class="skill-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="skill-icon-wrap mb-3"><i class="fab fa-docker"></i></div>
+          <h5 class="skill-card-title">DevOps &amp; Tools</h5>
+          <div class="skill-tags"><span>Docker</span><span>Git</span><span>Linux</span></div>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+        <div class="skill-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="skill-icon-wrap mb-3"><i class="fas fa-sitemap"></i></div>
+          <h5 class="skill-card-title">System Design</h5>
+          <div class="skill-tags"><span>Distributed Systems</span><span>Event-Driven Arch.</span><span>Real-Time Processing</span><span>REST API Design</span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section-pad bg-light-custom">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">04. Projects</span>
+      <h2 class="section-title">Featured Work</h2>
+      <div class="title-line mx-auto"></div>
+    </div>
+    <div class="row">
+      <!-- P1 -->
+      <div class="col-lg-6 mb-4 animate-on-scroll">
+        <div class="project-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="d-flex align-items-center mb-3"><div class="proj-num">01</div><div class="proj-icon ml-3"><i class="fas fa-traffic-light"></i></div></div>
+          <h4 class="proj-title">SentinelAI</h4>
+          <p class="proj-subtitle text-muted mb-3">Edge-Based Traffic Violation Detection System</p>
+          <ul class="proj-desc-list">
+            <li>Built a distributed full stack system for real-time traffic monitoring.</li>
+            <li>Designed backend services with Django and integrated RabbitMQ for async processing.</li>
+            <li>Developed Angular-based dashboard with WebSocket communication for live updates.</li>
+            <li>Optimized for low-latency scalable processing using YOLOv8.</li>
+          </ul>
+          <div class="tech-pills mt-3"><span>Python</span><span>Django</span><span>Angular</span><span>YOLOv8</span><span>RabbitMQ</span><span>Go</span><span>Docker</span></div>
+          <div class="proj-links mt-3"><a href="https://github.com/YOUR-USERNAME" target="_blank" class="proj-link"><i class="fab fa-github mr-1"></i>Code</a></div>
+        </div></div>
+      </div>
+      <!-- P2 -->
+      <div class="col-lg-6 mb-4 animate-on-scroll">
+        <div class="project-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="d-flex align-items-center mb-3"><div class="proj-num">02</div><div class="proj-icon ml-3"><i class="fas fa-brain"></i></div></div>
+          <h4 class="proj-title">CuratorAI</h4>
+          <p class="proj-subtitle text-muted mb-3">Semantic Retrieval-Augmented Document Intelligence System</p>
+          <ul class="proj-desc-list">
+            <li>Built a full stack document query system with upload, processing &amp; response pipeline.</li>
+            <li>Implemented semantic search and backend APIs for efficient data retrieval.</li>
+            <li>Integrated local LLM inference (Ollama), reducing cost and improving control.</li>
+            <li>Designed scalable architecture handling large document chunks efficiently.</li>
+          </ul>
+          <div class="tech-pills mt-3"><span>Python</span><span>Sentence Transformers</span><span>Ollama</span><span>Vector Search</span></div>
+          <div class="proj-links mt-3"><a href="https://github.com/YOUR-USERNAME" target="_blank" class="proj-link"><i class="fab fa-github mr-1"></i>Code</a></div>
+        </div></div>
+      </div>
+      <!-- P3 -->
+      <div class="col-lg-6 mb-4 animate-on-scroll">
+        <div class="project-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="d-flex align-items-center mb-3"><div class="proj-num">03</div><div class="proj-icon ml-3"><i class="fas fa-university"></i></div></div>
+          <h4 class="proj-title">PlaceSync</h4>
+          <p class="proj-subtitle text-muted mb-3">Real-Time Campus Recruitment Platform</p>
+          <ul class="proj-desc-list">
+            <li>Developed a real-time recruitment platform with admin and student interfaces.</li>
+            <li>Enabled live updates using Firebase, reducing manual coordination by <strong>80%</strong>.</li>
+            <li>Designed dynamic UI components using RecyclerView (Android).</li>
+          </ul>
+          <div class="tech-pills mt-3"><span>Android</span><span>Java</span><span>Firebase Realtime DB</span><span>RecyclerView</span></div>
+          <div class="proj-links mt-3">
+            <a href="https://github.com/YOUR-USERNAME" target="_blank" class="proj-link mr-3"><i class="fab fa-github mr-1"></i>Code</a>
+            <a href="https://github.com/YOUR-USERNAME" target="_blank" class="proj-link"><i class="fas fa-file-alt mr-1"></i>Docs</a>
           </div>
-          <div class="project-links">
-            <a href="#" class="project-link">View Code →</a>
+        </div></div>
+      </div>
+      <!-- P4 -->
+      <div class="col-lg-6 mb-4 animate-on-scroll">
+        <div class="project-card card border-0 shadow-sm h-100"><div class="card-body p-4">
+          <div class="d-flex align-items-center mb-3"><div class="proj-num">04</div><div class="proj-icon ml-3"><i class="fab fa-twitter"></i></div></div>
+          <h4 class="proj-title">Twwitt Karo</h4>
+          <p class="proj-subtitle text-muted mb-3">A Mini Twitter Clone (Django + SQLite)</p>
+          <ul class="proj-desc-list">
+            <li>Built a full stack social media app with authentication and full CRUD features.</li>
+            <li>Designed responsive frontend and efficient backend routing with Django.</li>
+            <li>Improved usability through optimized architecture.</li>
+          </ul>
+          <div class="tech-pills mt-3"><span>Django</span><span>Python</span><span>SQLite</span><span>HTML/CSS</span></div>
+          <div class="proj-links mt-3"><a href="https://github.com/YOUR-USERNAME" target="_blank" class="proj-link"><i class="fab fa-github mr-1"></i>Code</a></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section-pad bg-white">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">05. Education</span>
+      <h2 class="section-title">Academic Background</h2>
+      <div class="title-line mx-auto"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-5 mb-4 animate-on-scroll">
+        <div class="edu-card card border-0 shadow-sm h-100"><div class="card-body p-4 text-center">
+          <div class="edu-icon mb-3"><i class="fas fa-graduation-cap"></i></div>
+          <h5 class="edu-degree">Master of Computer Application</h5>
+          <p class="edu-degree-short text-muted mb-1">MCA</p>
+          <p class="edu-college"><i class="fas fa-map-marker-alt mr-1"></i>MIT Arts Commerce Science College, Alandi</p>
+          <p class="edu-univ text-muted small">Savitribai Phule Pune University</p>
+          <span class="badge-date mt-2 d-inline-block"><i class="far fa-calendar-alt mr-1"></i>Expected April 2027</span>
+        </div></div>
+      </div>
+      <div class="col-lg-5 mb-4 animate-on-scroll">
+        <div class="edu-card card border-0 shadow-sm h-100"><div class="card-body p-4 text-center">
+          <div class="edu-icon mb-3"><i class="fas fa-university"></i></div>
+          <h5 class="edu-degree">Bachelor of Computer Application</h5>
+          <p class="edu-degree-short text-muted mb-1">BCA</p>
+          <p class="edu-college"><i class="fas fa-map-marker-alt mr-1"></i>MES Abasaheb Garware College Of Science</p>
+          <p class="edu-univ text-muted small">Savitribai Phule Pune University</p>
+          <span class="badge-date mt-2 d-inline-block"><i class="far fa-calendar-alt mr-1"></i>April 2025</span>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-pad contact-section">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag section-tag-white">06. Contact</span>
+      <h2 class="section-title text-white">Let's Work Together</h2>
+      <div class="title-line mx-auto" style="background:#fff;"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-5 mb-4 animate-on-scroll">
+        <div class="contact-info-card h-100">
+          <h4 class="mb-4 text-white">Get In Touch</h4>
+          <p class="text-light mb-4">Whether you're looking for a full-stack engineer, want to discuss a project, or just want to talk tech — I'm always open to new opportunities!</p>
+          <div class="contact-detail-item">
+            <div class="contact-det-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <small class="text-light" style="opacity:.75;">Email</small>
+              <p class="mb-0"><a href="mailto:shubhamsapkal2912@gmail.com" class="text-white">shubhamsapkal2912@gmail.com</a></p>
+            </div>
           </div>
-        </div>
-        <div class="project-card glass-card">
-          <div class="project-number">02</div>
-          <h3>Twwitt Karo</h3>
-          <p>Secure microblogging platform with Django. Full CRUD operations, robust auth, and responsive UI improving usability by <strong>60%</strong>.</p>
-          <div class="project-impact">Impact: 60% ↑ usability</div>
-          <div class="tech-tags">
-            <span>Django</span>
-            <span>Python</span>
-            <span>SQLite</span>
+          <div class="contact-detail-item mt-3">
+            <div class="contact-det-icon"><i class="fas fa-phone"></i></div>
+            <div><small class="text-light" style="opacity:.75;">Phone</small><p class="mb-0 text-white">+91 9373290652</p></div>
           </div>
-          <div class="project-links">
-            <a href="#" class="project-link">Live Demo →</a>
+          <div class="contact-detail-item mt-3">
+            <div class="contact-det-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><small class="text-light" style="opacity:.75;">Location</small><p class="mb-0 text-white">Pune, Maharashtra, India</p></div>
           </div>
-        </div>
-        <div class="project-card glass-card">
-          <div class="project-number">03</div>
-          <h3>Automated Email System</h3>
-          <p>Python-powered email dispatch automating 100+ personalized internship applications with <strong>90%</strong> efficiency boost.</p>
-          <div class="project-impact">Impact: 90% ↑ efficiency</div>
-          <div class="tech-tags">
-            <span>Python</span>
-            <span>Pandas</span>
-            <span>SMTP</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link">View Code →</a>
-          </div>
-        </div>
-        <div class="project-card glass-card">
-          <div class="project-number">04</div>
-          <h3>Custom DBMS Console</h3>
-          <p>Console-based database management system mimicking SQL operations with CRUD, aggregates, and method overloading.</p>
-          <div class="project-impact">Educational Project</div>
-          <div class="tech-tags">
-            <span>Java</span>
-            <span>Data Structures</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link">Documentation →</a>
+          <div class="mt-4 d-flex">
+            <a href="https://linkedin.com/in/YOUR-PROFILE" target="_blank" class="contact-social-btn mr-2"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/YOUR-USERNAME" target="_blank" class="contact-social-btn mr-2"><i class="fab fa-github"></i></a>
+            <a href="https://leetcode.com/YOUR-USERNAME" target="_blank" class="contact-social-btn"><i class="fas fa-terminal"></i></a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">05.</span> Get In Touch
-      </h2>
-      <div class="contact-grid">
-        <div class="contact-info glass-card">
-          <h3>Let's Build Something Intelligent</h3>
-          <p>Whether you're looking for an AI engineer, full-stack developer, or just want to discuss cutting-edge tech—I'm always open to new opportunities.</p>
-          <div class="contact-details">
-            <div class="contact-item">
-              <span class="contact-icon">📧</span>
-              <a href="mailto:shubhamsapkal2912@gmail.com">shubhamsapkal2912@gmail.com</a>
+      <div class="col-lg-5 mb-4 animate-on-scroll">
+        <div class="contact-form-card h-100">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label class="small font-weight-bold text-dark">Your Name</label>
+              <input type="text" class="form-control contact-input" id="contactName" placeholder="John Doe" required/>
             </div>
-            <div class="contact-item">
-              <span class="contact-icon">📱</span>
-              <span>+91 9373290652</span>
+            <div class="form-group">
+              <label class="small font-weight-bold text-dark">Email Address</label>
+              <input type="email" class="form-control contact-input" id="contactEmail" placeholder="john@example.com" required/>
             </div>
-            <div class="contact-item">
-              <span class="contact-icon">📍</span>
-              <span>Pune, India</span>
+            <div class="form-group">
+              <label class="small font-weight-bold text-dark">Subject</label>
+              <input type="text" class="form-control contact-input" id="contactSubject" placeholder="Project Collaboration"/>
             </div>
-          </div>
+            <div class="form-group">
+              <label class="small font-weight-bold text-dark">Message</label>
+              <textarea class="form-control contact-input" id="contactMessage" rows="4" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-send-msg btn-block" id="sendBtn">
+              <i class="fas fa-paper-plane mr-2"></i>Send Message
+            </button>
+          </form>
         </div>
-        <form id="contactForm" class="contact-form glass-card">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <input type="text" placeholder="Subject">
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="btn-primary">
-            <span>Send Message</span>
-            <span class="btn-icon">→</span>
-          </button>
-        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>Designed & Built by <span class="highlight">Shubham Sapkal</span></p>
-      <p class="footer-tech">Made with Django mindset & Angular precision</p>
-    </div>
-  </footer>
+<!-- FOOTER -->
+<footer class="footer py-4">
+  <div class="container text-center">
+    <p class="mb-1"><span class="brand-bracket-dark">&lt;</span><strong>Shubham Sapkal</strong><span class="brand-bracket-dark">/&gt;</span></p>
+    <p class="footer-text mb-0">Built with <i class="fas fa-heart text-danger"></i> using HTML, CSS, JavaScript &amp; Bootstrap 4</p>
+    <p class="footer-copy mt-1">&copy; 2026 Shubham Sapkal. All rights reserved.</p>
+  </div>
+</footer>
 
-  <script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
