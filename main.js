@@ -2,7 +2,7 @@
   'use strict';
 
   /* 1. TYPEWRITER */
-  var roles = ['Full Stack Engineer', 'Angular Developer', 'Django Backend Dev', 'REST API Architect', 'Problem Solver'];
+  var roles = ['Backend Software Engineer', 'Django Developer', 'RAG / LLM Engineer', 'Computer Vision Engineer', 'REST API Architect'];
   var ri = 0, ci = 0, del = false;
   var tel = document.getElementById('typingText');
 
@@ -83,42 +83,7 @@
     aels.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* 7. CONTACT FORM */
-  var cf = document.getElementById('contactForm');
-  var sb = document.getElementById('sendBtn');
-  if (cf) {
-    cf.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var n = document.getElementById('contactName').value.trim();
-      var em = document.getElementById('contactEmail').value.trim();
-      var msg = document.getElementById('contactMessage').value.trim();
-      if (!n || !em || !msg) { showAlert('Please fill in all required fields.', 'danger'); return; }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { showAlert('Please enter a valid email address.', 'danger'); return; }
-      var oh = sb.innerHTML;
-      sb.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-      sb.disabled = true;
-      setTimeout(function () {
-        sb.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
-        sb.style.background = 'linear-gradient(135deg,#10b981,#059669)';
-        showAlert('Thank you! Your message has been sent successfully.', 'success');
-        cf.reset();
-        setTimeout(function () { sb.innerHTML = oh; sb.style.background = ''; sb.disabled = false; }, 3500);
-      }, 1600);
-    });
-  }
-
-  function showAlert(msg, type) {
-    var ex = document.getElementById('formAlert'); if (ex) ex.remove();
-    var al = document.createElement('div');
-    al.id = 'formAlert';
-    al.className = 'alert alert-' + type + ' mt-3';
-    al.style.cssText = 'border-radius:10px;font-size:.9rem;font-weight:500;';
-    al.innerHTML = '<i class="fas fa-' + (type === 'success' ? 'check-circle' : 'exclamation-circle') + ' mr-2"></i>' + msg;
-    cf.appendChild(al);
-    setTimeout(function () { if (al.parentNode) al.remove(); }, 4000);
-  }
-
-  /* 8. SKILL HOVER */
+  /* 7. SKILL HOVER */
   document.querySelectorAll('.skill-card').forEach(function (card) {
     card.addEventListener('mouseenter', function () {
       this.querySelectorAll('.skill-tags span').forEach(function (s, i) {
@@ -130,10 +95,10 @@
     });
   });
 
-  /* 9. BOOTSTRAP SCROLLSPY */
+  /* 8. BOOTSTRAP SCROLLSPY */
   if (typeof $ !== 'undefined') $('body').scrollspy({ target: '#mainNavbar', offset: 80 });
 
-  /* 10. CONSOLE EASTER EGG */
+  /* 9. CONSOLE EASTER EGG */
   console.log('%c Shubham Sapkal | Portfolio', 'color:#1a73e8;font-size:20px;font-weight:bold;');
   console.log('%c Full Stack Engineer | Angular + Django', 'color:#0ea5e9;font-size:13px;');
   console.log('%c shubhamsapkal2912@gmail.com', 'color:#10b981;font-size:12px;');

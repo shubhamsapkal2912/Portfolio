@@ -164,8 +164,8 @@ body { font-family: 'Poppins', sans-serif; color: var(--dark-text); background: 
   0%, 100% { box-shadow: 0 12px 40px rgba(26,115,232,0.35), 0 0 0 0 rgba(79,195,247,0.4); }
   50% { box-shadow: 0 12px 40px rgba(26,115,232,0.5), 0 0 0 15px rgba(79,195,247,0); }
 }
-.avatar-inner { width: 100%; height: 100%; border-radius: 50%; background: var(--pale-blue); display: flex; align-items: center; justify-content: center; }
-.avatar-initials { font-size: 4rem; font-weight: 800; color: var(--primary-blue); font-family: 'Fira Code', monospace; }
+.avatar-inner { width: 100%; height: 100%; border-radius: 50%; background: var(--pale-blue); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.avatar-photo { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 .avatar-badge {
   position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
   background: var(--gradient-primary); color: var(--white);
@@ -233,6 +233,14 @@ body { font-family: 'Poppins', sans-serif; color: var(--dark-text); background: 
 .proj-link { color: var(--primary-blue); font-weight: 600; font-size: 0.88rem; text-decoration: none; transition: var(--transition); }
 .proj-link:hover { color: var(--light-blue); text-decoration: none; }
 
+/* ── CERTIFICATIONS ── */
+.cert-card { border-radius: 14px !important; background: var(--white); box-shadow: var(--shadow-card) !important; transition: var(--transition); border-top: 3px solid transparent !important; }
+.cert-card:hover { border-top-color: var(--primary-blue) !important; box-shadow: var(--shadow-hover) !important; transform: translateY(-5px); }
+.cert-icon { width: 52px; height: 52px; background: var(--pale-blue); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--primary-blue); }
+.cert-title { font-size: 1.05rem; font-weight: 700; color: var(--dark-text); margin-bottom: 0.2rem; }
+.cert-issuer { font-size: 0.9rem; font-weight: 600; color: var(--primary-blue); }
+.cert-meta { font-size: 0.8rem; }
+
 /* ── EDUCATION ── */
 .edu-card { border-radius: 16px !important; background: var(--white); box-shadow: var(--shadow-card) !important; transition: var(--transition); border-bottom: 3px solid transparent !important; }
 .edu-card:hover { border-bottom-color: var(--primary-blue) !important; box-shadow: var(--shadow-hover) !important; transform: translateY(-5px); }
@@ -246,15 +254,10 @@ body { font-family: 'Poppins', sans-serif; color: var(--dark-text); background: 
 .contact-section { background: var(--gradient-hero); position: relative; overflow: hidden; }
 .contact-section .section-title { color: var(--white); }
 .contact-info-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 2.5rem; backdrop-filter: blur(10px); }
-.contact-form-card { background: rgba(255,255,255,0.97); border-radius: 16px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
 .contact-detail-item { display: flex; align-items: flex-start; gap: 1rem; }
 .contact-det-icon { width: 42px; height: 42px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1rem; flex-shrink: 0; }
 .contact-social-btn { width: 42px; height: 42px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: var(--white); font-size: 1rem; text-decoration: none; transition: var(--transition); }
 .contact-social-btn:hover { background: var(--white); color: var(--primary-blue); transform: translateY(-3px); }
-.contact-input { background: var(--pale-blue-2) !important; border: 2px solid var(--border-color) !important; border-radius: 10px !important; padding: 0.75rem 1rem !important; font-size: 0.92rem !important; color: var(--dark-text) !important; transition: var(--transition) !important; }
-.contact-input:focus { border-color: var(--primary-blue) !important; box-shadow: 0 0 0 3px rgba(26,115,232,0.15) !important; background: var(--white) !important; }
-.btn-send-msg { background: var(--gradient-primary); color: var(--white); border: none; border-radius: 10px; padding: 0.8rem; font-weight: 700; font-size: 0.95rem; transition: var(--transition); box-shadow: 0 4px 16px rgba(26,115,232,0.35); }
-.btn-send-msg:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,115,232,0.5); color: var(--white); }
 
 /* ── FOOTER ── */
 .footer { background: #0d1b2a; color: rgba(255,255,255,0.7); }
