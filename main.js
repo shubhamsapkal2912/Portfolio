@@ -2,7 +2,7 @@
   'use strict';
 
   /* 1. TYPEWRITER */
-  var roles = ['Backend Software Engineer', 'Django Developer', 'RAG / LLM Engineer', 'Computer Vision Engineer', 'REST API Architect'];
+  var roles = ['Full Stack Software Engineer', 'Django REST Framework Developer', 'Angular 18 Developer', 'Computer Vision Engineer', 'RAG / LLM Engineer'];
   var ri = 0, ci = 0, del = false;
   var tel = document.getElementById('typingText');
 
